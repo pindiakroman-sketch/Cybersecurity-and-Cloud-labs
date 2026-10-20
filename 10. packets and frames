@@ -1,0 +1,85 @@
+# Packets and Frames | Incident Report & Analysis
+
+- **Platform:** TryHackMe
+- **Category:** Networking / Cybersecurity
+- **Difficulty:** Beginner
+- **Tools:** TryHackMe, Packet and Frame Concepts
+
+---
+
+## 1. Executive Summary
+
+This lab introduced packets and frames, two fundamental units used to describe network communication.
+
+Packets are commonly associated with the network layer, while frames are associated with the data-link layer. Understanding their structure helps explain how data travels between devices and how network traffic can be inspected during security investigations.
+
+## 2. Technical Investigation
+
+### 2.1 Packets
+
+An IP packet contains an IP header and payload.
+
+The IP header includes information such as:
+
+- Source IP address.
+- Destination IP address.
+- Protocol information.
+- Other fields used for delivery and handling.
+
+Routers inspect IP information to determine where to forward packets.
+
+### 2.2 Frames
+
+An Ethernet frame carries a network-layer payload across a local network link.
+
+An Ethernet frame typically includes:
+
+- Destination MAC address.
+- Source MAC address.
+- EtherType or length field.
+- Payload.
+- Frame Check Sequence (FCS), used for error detection.
+
+Switches use MAC addresses to forward Ethernet frames within a LAN.
+
+### 2.3 Encapsulation
+
+When IPv4 traffic is carried over Ethernet, an Ethernet frame contains an IP packet, which may contain a TCP segment or UDP datagram.
+
+A simplified structure is:
+
+`Ethernet Frame → IP Packet → TCP Segment → Application Data`
+
+At the destination, the headers are processed and removed as the data moves up the protocol stack.
+
+The exact structure depends on the protocols being used.
+
+### 2.4 Security Relevance
+
+Packet and frame analysis can help identify:
+
+- Unexpected communication between hosts.
+- Connections to suspicious IP addresses.
+- Unusual ports or protocols.
+- Potential network scanning.
+- Cleartext data transmitted without appropriate protection.
+
+Encrypted traffic may conceal application content, but metadata such as addresses, ports, timing, and traffic volume can still be observable.
+
+## 3. Findings
+
+- Frames are used for data-link communication; packets are associated with network-layer communication.
+- Ethernet frames contain MAC addressing information.
+- IP packets contain source and destination IP addresses.
+- Encapsulation allows protocols at different layers to work together.
+- Traffic analysis can reveal suspicious behaviour, although a single packet rarely proves malicious activity.
+
+## 4. Remediation & Mitigation
+
+- Use tools such as Wireshark to inspect authorised network captures.
+- Investigate unexpected source and destination addresses.
+- Use encryption such as HTTPS to protect application data in transit.
+- Monitor network traffic for suspicious patterns.
+- Correlate packet evidence with logs and other telemetry before drawing conclusions.
+
+**Lab Status:** Packet and frame fundamentals reviewed.
