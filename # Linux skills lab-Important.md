@@ -69,5 +69,5 @@ By documenting these tasks, I demonstrate a strong command of the Linux CLI, sys
 ---
 
 ## 📈 Current Progress & Metrics
-* **TryHackMe Global Rank:** Currently positioned within the **TOP 5% - 8%** globally among millions of users.
+* **TryHackMe Global Rank:** Currently positioned within the **TOP 10%** globally among millions of users.
 * **Next Career Milestone:** Blending this practical Linux core with enterprise cloud engineering by studying for the **Microsoft Azure Administrator (AZ-104)** certification.
