@@ -125,4 +125,3 @@ find / -type f 2>/dev/null | grep -E "/(8V2L|bny0|c4ZX|D8B3|FHI1|oiMO|PFbD|rmfX|
     1. `User (rwx)`: Owner can Read, Write, and **Execute** (`x`).
     2. `Group (rwx)`: Group members can Read, Write, and **Execute** (`x`).
     3. `Others (r-x)`: **Any generic user on the system can Read and Execute (`x`).**
-* **SOC / Enterprise Context:** 
